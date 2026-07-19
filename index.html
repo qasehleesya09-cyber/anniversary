@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy anniversary love!</title>
+    <!-- Font Elegan & Cursive Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- TETAPAN AKSES MOBILE & LATAR BELAKANG --- */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(180deg, #2b101d 0%, #1e0b14 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Cormorant Garamond', serif;
+            color: #f7e1e5;
+            font-weight: 300;
+        }
+
+        .mobile-viewport {
+            width: 100%;
+            max-width: 420px;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* --- ANIMASI BUNGA TERAPUNG PERLAHAN (BACKGROUND) --- */
+        .flower-bg {
+            position: absolute;
+            font-size: 1.4rem;
+            opacity: 0.3;
+            pointer-events: none;
+            filter: drop-shadow(0 0 5px rgba(255, 182, 193, 0.5));
+        }
+
+        @keyframes floatSlow {
+            0% { transform: translateY(0px) rotate(0deg); opacity: 0.2; }
+            50% { transform: translateY(-20px) rotate(45deg); opacity: 0.5; }
+            100% { transform: translateY(0px) rotate(0deg); opacity: 0.2; }
+        }
+
+        .flower1 { top: 10%; left: 15%; animation: floatSlow 7s infinite ease-in-out; }
+        .flower2 { top: 8%; right: 20%; animation: floatSlow 9s infinite ease-in-out; }
+        .flower3 { bottom: 25%; left: 20%; animation: floatSlow 8s infinite ease-in-out; }
+        .flower4 { bottom: 12%; right: 15%; animation: floatSlow 6s infinite ease-in-out; }
+
+        /* --- KANDUNGAN UTAMA & ANIMASI TRANSISI SMOOTH --- */
+        .content-area {
+            text-align: center;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 40px;
+            opacity: 1;
+            filter: blur(0px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), filter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-out-smooth {
+            opacity: 0 !important;
+            filter: blur(8px) !important;
+        }
+
+        .center-flower {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            display: inline-block;
+            animation: pulseMekar 3s infinite ease-in-out;
+            filter: drop-shadow(0 0 15px rgba(255, 105, 180, 0.6));
+        }
+
+        @keyframes pulseMekar {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.15) rotate(10deg); }
+        }
+
+        .text-ready {
+            font-family: 'Cormorant Garamond', serif;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 4px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: rgba(247, 225, 229, 0.85);
+            line-height: 1.6;
+        }
+
+        .cursive-magenta {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.2rem;
+            color: #ff4fa8;
+            text-shadow: 0 0 15px rgba(255, 79, 168, 0.7);
+            margin-top: -10px;
+            margin-bottom: 40px;
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        .font-biasa-pink-glow {
+            font-family: 'Cormorant Garamond', serif;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            letter-spacing: 4px;
+            color: #ff4fa8;
+            text-shadow: 0 0 15px rgba(255, 79, 168, 0.7);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* --- BUTANG --- */
+        .btn-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            height: 50px;
+        }
+
+        .btn-choice {
+            background: transparent;
+            border: 1px solid rgba(247, 225, 229, 0.4);
+            color: #f7e1e5;
+            padding: 10px 35px;
+            font-size: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: background 0.3s ease, border-color 0.3s ease;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            white-space: nowrap;
+        }
+
+        .btn-choice:hover {
+            background: rgba(247, 225, 229, 0.1);
+            border-color: #f7e1e5;
+            box-shadow: 0 0 10px rgba(247, 225, 229, 0.2);
+        }
+
+        .btn-no-move {
+            position: relative;
+        }
+
+        .music-box {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .btn-song {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 79, 168, 0.3);
+            color: #f7e1e5;
+            width: 85%;
+            padding: 15px;
+            font-size: 1rem;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-song:hover {
+            background: rgba(255, 79, 168, 0.15);
+            border-color: #ff4fa8;
+            box-shadow: 0 0 15px rgba(255, 79, 168, 0.4);
+            transform: scale(1.03);
+        }
+
+        .now-playing-status {
+            position: absolute;
+            top: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0;
+            color: #ffb6c1;
+            text-shadow: 0 0 8px rgba(255, 182, 193, 0.3);
+            transition: opacity 1s ease;
+            text-align: center;
+            width: 90%;
+            z-index: 100;
+            pointer-events: none;
+            line-height: 1.4;
+        }
+
+        /* --- SISTEM DIGITAL BOUQUET --- */
+        .bouquet-container {
+            width: 100%;
+            height: 350px;
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .vase {
+            width: 80px;
+            height: 40px;
+            background: rgba(255, 105, 180, 0.25);
+            border-radius: 40px 40px 30px 30px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid rgba(255, 182, 193, 0.4);
+            box-shadow: 0 0 20px rgba(255, 79, 168, 0.4), inset 0 0 10px rgba(255,255,255,0.2);
+            z-index: 5;
+        }
+        .vase::before {
+            content: '';
+            position: absolute;
+            width: 25px; height: 25px;
+            background: rgba(255, 105, 180, 0.25);
+            border-radius: 50%;
+            left: -12px; top: 0px;
+            border: 1px solid rgba(255, 182, 193, 0.3);
+        }
+        .vase::after {
+            content: '';
+            position: absolute;
+            width: 25px; height: 25px;
+            background: rgba(255, 105, 180, 0.25);
+            border-radius: 50%;
+            right: -12px; top: 0px;
+            border: 1px solid rgba(255, 182, 193, 0.3);
+        }
+
+        .stem-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0; left: 0;
+            pointer-events: none;
+        }
+        .stem {
+            position: absolute;
+            background: linear-gradient(to top, rgba(76, 133, 90, 0.7), rgba(114, 184, 133, 0.5));
+            width: 3px;
+            bottom: 45px;
+            left: 50%;
+            transform-origin: bottom center;
+            border-radius: 2px;
+        }
+        .stem-1 { height: 180px; transform: translateX(-50%) rotate(-25deg); }
+        .stem-2 { height: 210px; transform: translateX(-50%) rotate(-12deg); }
+        .stem-3 { height: 230px; transform: translateX(-50%) rotate(0deg); }
+        .stem-4 { height: 210px; transform: translateX(-50%) rotate(12deg); }
+        .stem-5 { height: 170px; transform: translateX(-50%) rotate(28deg); }
+
+        .stem::before, .stem::after {
+            content: '🍃';
+            position: absolute;
+            font-size: 0.6rem;
+            opacity: 0.6;
+        }
+        .stem::before { top: 40%; left: -8px; transform: scaleX(-1); }
+        .stem::after { top: 70%; right: -8px; }
+
+        .flower-clickable {
+            position: absolute;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            animation: floatFlower 4s infinite ease-in-out;
+            z-index: 10;
+            user-select: none;
+        }
+        .flower-clickable:hover {
+            transform: scale(1.25) rotate(10deg);
+        }
+
+        @keyframes floatFlower {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(4deg); }
+        }
+
+        .fl-1 { bottom: 210px; left: 23%; animation-delay: 0s; }
+        .fl-2 { bottom: 245px; left: 33%; animation-delay: 0.5s; }
+        .fl-3 { bottom: 265px; left: 45%; animation-delay: 1s; }
+        .fl-4 { bottom: 245px; left: 58%; animation-delay: 1.5s; }
+        .fl-5 { bottom: 200px; left: 69%; animation-delay: 2s; }
+          
+        .fl-extra1 { bottom: 290px; left: 18%; font-size: 1.4rem; opacity: 0.7; }
+        .fl-extra2 { bottom: 310px; right: 22%; font-size: 1.5rem; opacity: 0.7; }
+
+        .particle {
+            position: fixed;
+            pointer-events: none;
+            font-size: 1.5rem;
+            z-index: 9999;
+            animation: explodeAndFall 1.2s forwards cubic-bezier(0.1, 0.8, 0.3, 1);
+        }
+
+        @keyframes explodeAndFall {
+            0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+            100% { transform: translate(var(--x), var(--y)) scale(0.5) rotate(var(--r)); opacity: 0; }
+        }
+
+        /* ====================================================
+           REKA BENTUK FILM ROLL (INFINITE SCROLLING)
+           ==================================================== */
+        .film-container {
+            width: 100vw;
+            max-width: 420px;
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+        }
+
+        .film-track {
+            display: flex;
+            width: max-content;
+            animation: scrollFilm 25s linear infinite;
+        }
+
+        .film-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollFilm {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .film-strip {
+            display: flex;
+            background: #111111;
+            padding: 18px 0;
+            position: relative;
+            border-top: 6px dashed #333;
+            border-bottom: 6px dashed #333;
+        }
+
+        .film-strip::before, .film-strip::after {
+            content: '';
+            position: absolute;
+            left: 0; width: 100%; height: 6px;
+            background-image: linear-gradient(to right, #000 0%, #000 50%, transparent 50%, transparent 100%);
+            background-size: 12px 100%;
+        }
+        .film-strip::before { top: -6px; }
+        .film-strip::after { bottom: -6px; }
+
+        .film-frame {
+            width: 130px;
+            height: 95px;
+            background: #222;
+            margin: 0 6px;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border-left: 2px solid #000;
+            border-right: 2px solid #000;
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        .film-frame:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+            z-index: 15;
+        }
+
+        .film-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+            transition: opacity 0.2s ease;
+        }
+        .film-frame:hover img {
+            opacity: 1;
+        }
+
+        .film-meta {
+            position: absolute;
+            bottom: 2px;
+            left: 4px;
+            font-size: 8px;
+            color: #aaa;
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        /* ====================================================
+           MODAL POP-UP (BUTIRAN MEMORI APBILA DITEKAN)
+           ==================================================== */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(15, 5, 11, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-card {
+            background: #fdfbf7;
+            width: 85%;
+            max-width: 340px;
+            padding: 15px;
+            border-radius: 12px;
+            color: #2b101d;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            transform: scale(0.85);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: center;
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1);
+        }
+
+        .modal-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .modal-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #ff4fa8;
+            margin: 15px 0 5px 0;
+            font-weight: 700;
+        }
+
+        .modal-date {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.9rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .modal-story {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #4a3b43;
+            max-height: 120px;
+            overflow-y: auto;
+            padding: 0 5px;
+            text-align: justify;
+        }
+
+        .modal-close-btn {
+            margin-top: 20px;
+            background: #2b101d;
+            color: #f7e1e5;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .modal-close-btn:hover {
+            background: #ff4fa8;
+        }
+
+        /* ====================================================
+           REKABENTUK BALANG KACA REALISTIK (DENGAN TINGKAH GULUNGAN KERTAS)
+           ==================================================== */
+        .jar-wrapper {
+            position: relative;
+            width: 170px;
+            height: 240px;
+            margin: 15px auto;
+            user-select: none;
+        }
+
+        .jar-glass {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.03) 100%);
+            border: 2px solid rgba(247, 225, 229, 0.4);
+            border-radius: 40px 40px 60px 60px;
+            position: absolute;
+            bottom: 0;
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.4),
+                inset 0 0 25px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(1px);
+            overflow: hidden; /* Simpan gulungan di dalam balang */
+        }
+
+        /* Pantulan Cahaya Kaca */
+        .jar-glass::before {
+            content: '';
+            position: absolute;
+            top: 25px; left: 15px;
+            width: 12px; height: 120px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, transparent 100%);
+            border-radius: 10px;
+            transform: rotate(-3deg);
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .jar-neck {
+            width: 96px;
+            height: 16px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 2px solid rgba(247, 225, 229, 0.35);
+            position: absolute;
+            bottom: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .jar-ribbon {
+            width: 102px;
+            height: 4px;
+            background: #ff4fa8;
+            position: absolute;
+            bottom: 206px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+        .jar-ribbon::after {
+            content: '🎀';
+            position: absolute;
+            font-size: 0.75rem;
+            top: -6px; left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .jar-cork-lid {
+            width: 88px;
+            height: 24px;
+            background: linear-gradient(to right, #a67c52, #c49a6c, #a67c52);
+            border-radius: 6px 6px 3px 3px;
+            position: absolute;
+            bottom: 214px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+
+        /* --- STRUKTUR GULUNGAN KERTAS INTERAKTIF (LITTLE SCROLLS) --- */
+        .scroll-note {
+            position: absolute;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+            animation: floatingScroll 4s infinite ease-in-out;
+            z-index: 5;
+            padding: 5px;
+        }
+
+        .scroll-note:hover {
+            transform: scale(1.3) rotate(15deg) !important;
+            filter: drop-shadow(0 0 8px rgba(255, 79, 168, 0.8));
+        }
+
+        @keyframes floatingScroll {
+            0%, 100% { transform: translateY(0px) rotate(var(--rot)); }
+            50% { transform: translateY(-8px) rotate(calc(var(--rot) + 8deg)); }
+        }
+
+        /* Kedudukan Rawak Terkawal dalam Balang */
+        .sc-0 { bottom: 20px; left: 20px; --rot: -15deg; animation-delay: 0.2s; }
+        .sc-1 { bottom: 25px; right: 25px; --rot: 20deg; animation-delay: 0.7s; }
+        .sc-2 { bottom: 70px; left: 50px; --rot: 5deg; animation-delay: 1.2s; }
+        .sc-3 { bottom: 75px; right: 15px; --rot: -25deg; animation-delay: 0s; }
+        .sc-4 { bottom: 120px; left: 22px; --rot: 35deg; animation-delay: 1.5s; }
+        .sc-5 { bottom: 125px; right: 48px; --rot: -10deg; animation-delay: 0.9s; }
+
+        /* Dipadam perlahan setelah ditekan */
+        .scroll-note.opened {
+            opacity: 0;
+            transform: scale(0) translateY(-30px) !important;
+            pointer-events: none;
+        }
+
+        /* ====================================================
+           FULL-SCREEN FILTER OVERLAY & ANIMASI FADE IN SMOOTH
+           ==================================================== */
+        .paper-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(15, 5, 11, 0.72);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* Hanya Fade In yang Lembut */
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .paper-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* ====================================================
+           REKA BENTUK CEBISAN KERTAS KOYAK ESTETIK (KOMPAK & KECIL)
+           ==================================================== */
+        .aesthetic-paper {
+            background: #faf6ee;
+            background-image: radial-gradient(rgba(0,0,0,0.02) 1px, transparent 0);
+            background-size: 20px 20px;
+            
+            /* Saiz yang kompak dan seimbang */
+            width: 82%;
+            max-width: 310px;
+            padding: 28px 22px 22px 22px;
+            color: #2b101d;
+            
+            /* Efek potongan kertas koyak gerigi halus atas & bawah */
+            clip-path: polygon(
+                0% 4px, 4% 0px, 8% 4px, 12% 0px, 16% 4px, 20% 0px, 24% 4px, 28% 0px, 32% 4px, 36% 0px, 40% 4px, 44% 0px, 48% 4px, 52% 0px, 56% 4px, 60% 0px, 64% 4px, 68% 0px, 72% 4px, 76% 0px, 80% 4px, 84% 0px, 88% 4px, 92% 0px, 96% 4px, 100% 0px,
+                100% 100%,
+                100% calc(100% - 4px), 96% 100%, 92% calc(100% - 4px), 88% 100%, 84% calc(100% - 4px), 80% 100%, 76% calc(100% - 4px), 72% 100%, 68% calc(100% - 4px), 64% 100%, 60% calc(100% - 4px), 56% 100%, 52% calc(100% - 4px), 48% 100%, 44% calc(100% - 4px), 40% 100%, 36% calc(100% - 4px), 32% 100%, 28% calc(100% - 4px), 24% 100%, 20% calc(100% - 4px), 16% 100%, 12% calc(100% - 4px), 8% 100%, 4% calc(100% - 4px), 0% 100%
+            );
+            
+            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.45));
+            text-align: center;
+            position: relative;
+            
+            /* Menggunakan transisi berskala lembut melengkapi fade in */
+            transform: scale(0.96);
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .paper-overlay.active .aesthetic-paper {
+            transform: scale(1);
+        }
+
+        .paper-reason-num {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.1rem;
+            color: #ff4fa8;
+            font-weight: 700;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed rgba(255, 79, 168, 0.25);
+            display: inline-block;
+            padding: 0 10px 3px 10px;
+        }
+
+        .paper-reason-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #3d3037;
+            text-align: justify;
+            margin-bottom: 22px;
+        }
+
+        .paper-close-btn {
+            background: transparent;
+            border: 1px solid rgba(43, 16, 29, 0.25);
+            color: #2b101d;
+            padding: 7px 25px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .paper-close-btn:hover {
+            background: #2b101d;
+            color: #faf6ee;
+            border-color: #2b101d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Audio Tag -->
+    <audio id="bgMusic" loop></audio>
+
+    <div class="mobile-viewport">
+        <!-- Status Muzik Terapung -->
+        <div class="now-playing-status" id="musicStatus">NOW PLAYING: NONE</div>
+
+        <!-- Bunga Hiasan Background -->
+        <div class="flower-bg flower1">🌸</div>
+        <div class="flower-bg flower2">✨</div>
+        <div class="flower-bg flower3">🌸</div>
+        <div class="flower-bg flower4">✨</div>
+
+        <!-- Kawasan Interaktif Utama -->
+        <div class="content-area" id="interactiveZone">
+            <!-- PAGE 1: MULA DENGAN HANGATNYA UCAPAN HELLO -->
+            <div class="cursive-magenta" style="font-size: 2.5rem; margin-bottom: 10px;">happy anniversary manja!</div>
+            <div class="text-ready" style="font-size: 1.1rem; color: #ffb6c1; margin-bottom: 15px; letter-spacing: 2px;">26th July 2026</div>
+            <div class="text-ready" style="font-size: 0.9rem; opacity: 0.6;">something special is waiting for you</div>
+        </div>
+    </div>
+
+    <!-- SEMUA MODAL POP-UP DIUBAH KEPADA GAYA GLASSMORPHISM COKLAT-UNGU LEMBUT (AESTHETIC) -->
+    
+    <!-- 1. MODAL DETAIL MEMORI FILMRoll -->
+    <div class="modal-overlay" id="memoryModal" onclick="closeModal(event)">
+        <div class="modal-card-aesthetic" onclick="event.stopPropagation()">
+            <img src="" id="mImg" class="modal-img" alt="Memory" style="border-radius: 12px; margin-bottom: 15px; border: 1px solid rgba(255, 255, 255, 0.1);">
+            <div id="mTitle" class="modal-title-aesthetic"></div>
+            <div id="mDate" class="modal-date-aesthetic"></div>
+            <div id="mStory" class="modal-story-aesthetic"></div>
+            <button class="modal-close-btn-aesthetic" onclick="closeModal(event, true)">close x</button>
+        </div>
+    </div>
+
+    <!-- 2. MODAL CEBISAN KERTAS JAR (SEKARANG GAYA AESTHETIC GLASS) -->
+    <div class="paper-overlay" id="paperOverlay" onclick="closePaper(event)">
+        <div class="modal-card-aesthetic" onclick="event.stopPropagation()">
+            <div class="modal-title-aesthetic" id="pReasonNum" style="font-size: 1.3rem; margin-bottom: 5px; color: #ffb6c1;">Reason #1</div>
+            <div class="modal-story-aesthetic" id="pReasonTxt" style="font-size: 1rem; margin-bottom: 25px;"></div>
+            <button class="modal-close-btn-aesthetic" onclick="closePaper(event, true)">close x</button>
+        </div>
+    </div>
+
+    <!-- 3. AUTOMATIK POP-UP SURAT HUGUNG (GAYA AESTHETIC GLASS & FADE IN LEMBUT) -->
+    <div class="modal-overlay" id="finalSurpriseModal" onclick="closeFinalModal(event)">
+        <div class="modal-card-aesthetic" onclick="event.stopPropagation()">
+            <div style="font-size: 3rem; margin-bottom: 15px; animation: floatMekar 3s infinite ease-in-out;">💝</div>
+            <div class="modal-title-aesthetic" style="font-size: 2.0rem; line-height: 1.2; font-family: 'Cormorant Garamond', serif;">
+                happy anniversary baby manja!
+            </div>
+            <div class="modal-story-aesthetic" style="margin-bottom: 25px;">
+                ALL DONE!! tell me what you feel about this surprise hihihi. i love you <3
+            </div>
+            <button class="modal-close-btn-aesthetic" onclick="closeFinalModal(event, true)">close x</button>
+        </div>
+    </div>
+
+    <style>
+        @keyframes bouncePelan {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-6px) scale(1.02) rotate(2deg); }
+        }
+        @keyframes floatMekar {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-8px) scale(1.05); }
+        }
+        
+        /* STYLING BARU UNTUK POP-UP BERDASARKAN GAMBAR RAJAH */
+        .modal-card-aesthetic {
+            background: rgba(59, 34, 47, 0.65) !important; /* Latar warna coklat-ungu gelap lutsinar */
+            backdrop-filter: blur(20px) !important; /* Efek frosted glass halus */
+            -webkit-backdrop-filter: blur(20px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important; /* Garisan border super nipis */
+            border-radius: 28px !important; /* Lengkungan bucu yang sangat kemas */
+            padding: 35px 25px !important;
+            width: 85%;
+            max-width: 320px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+            color: #ffffff !important;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: transform 0.4s ease, opacity 0.4s ease; /* Transisi masuk yang sangat smooth dan tidak mengejut */
+        }
+        
+        /* Apabila modal aktif, fade in + scale up perlahan-lahan */
+        .modal-overlay.active .modal-card-aesthetic,
+        .paper-overlay.active .modal-card-aesthetic {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .modal-title-aesthetic {
+            font-family: 'Cormorant Garamond', serif, sans-serif;
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #ffffff;
+            margin-bottom: 8px;
+            text-transform: none;
+        }
+
+        .modal-date-aesthetic {
+            font-size: 0.8rem;
+            color: #ffb6c1;
+            opacity: 0.8;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .modal-story-aesthetic {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 20px;
+            text-transform: none;
+            font-family: sans-serif;
+        }
+
+        /* GAYA BUTANG CLOSE SEPERTI DI DALAM GAMBAR RAJAH [Close x] */
+        .modal-close-btn-aesthetic {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            padding: 8px 24px !important;
+            border-radius: 20px !important; /* Oval Pill Style */
+            font-size: 0.85rem !important;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: sans-serif;
+            text-transform: none;
+            display: inline-block;
+            box-shadow: none !important;
+        }
+        .modal-close-btn-aesthetic:hover {
+            background: rgba(255, 255, 255, 0.15) !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+        }
+
+        .letter-box {
+            background: rgba(255, 255, 255, 0.95);
+            color: #2b101d;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            max-height: 280px;
+            overflow-y: auto;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            border: 1px solid #ffb6c1;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+
+    <script>
+        const playlist = {
+            bestpart: "bestpart.mp3", 
+            understand: "understand.mp3", 
+            herewithme: "herewithme.mp3",
+            bad: "bad.mp3"
+        };
+
+        const memories = [
+            {
+                img: "robstar.jpg",
+                title: "-",
+                date: "12 Disember 2024",
+                story: "-"
+            },
+            {
+                img: "baby.jpg", 
+                title: "-",
+                date: "25 Ogos 2025",
+                story: "-"
+            },
+            {
+                img: "bunny.jpg", 
+                title: "-",
+                date: "1 Januari 2026",
+                story: "-"
+            },
+            {
+                img: "snoopy.png",
+                title: "-",
+                date: "28 January 2026",
+                story: "-"
+            }
+        ];
+
+        const loveReasons = [
+            "i love you because you're always worth waiting for. every second spent with you reminds me why :D",
+            "i love you because every version of my future feels brighter as long as you're in it",
+            "i love you because i can be myself whenever im with you hihihi!",
+            "i love you because no matter how busy life gets, you'll always be my favourite part of the day",
+            "i love you because you make a every goodbye feels hard T___T",
+            "i love you because you never failed to make me laugh everytime!"
+        ];
+
+        const quizQuestions = [
+            {
+                question: "bila tarikh show bookday kita?",
+                choices: ["26 Julai 2025", "19 Julai 2025", "2 Ogos 2025", "23 Julai 2025"],
+                correct: 3
+            },
+            {
+                question: "apa warna outfit kita masa first date?",
+                choices: ["coklat", "putih", "hitam", "biru"],
+                correct: 2
+            },
+            {
+                question: "siapa favorite artist kita berdua?",
+                choices: ["daniel caesar", "sayang", "d4vd", "laufey"],
+                correct: 0
+            },
+            {
+                question: "berapa ramai anak we are planning to have?",
+                choices: ["1", "11", "3", "taknak anak"],
+                correct: 1
+            },
+            {
+                question: "kalau sayang emosi, biasanya sebab apa?",
+                choices: ["sendiri yang emosi", "sebab lapar", "sebab manja nyakat", "semua!"],
+                correct: 3
+            }
+        ];
+
+        let openedCount = 0;
+        let currentTaps = 0; 
+        let currentQuestionIndex = 0;
+        let quizScore = 0;
+        const zone = document.getElementById('interactiveZone');
+
+        setTimeout(() => { loadQuestionPage(); }, 2800);
+
+        function loadQuestionPage() {
+            zone.classList.add('fade-out-smooth');
+            setTimeout(() => {
+                zone.innerHTML = `
+                    <div class="center-flower">🌸</div>
+                    <div class="text-ready">welcome to our small world</div>
+                    <div class="font-biasa-pink-glow">are you ready manja?</div>
+                    <div class="btn-wrap" style="margin-bottom: 25px;">
+                        <button class="btn-choice" onclick="triggerPreparingPage()">Yes</button>
+                        <button class="btn-choice btn-no-move" id="escapeNo" onmouseover="elakNo()" ontouchstart="elakNo()">No</button>
+                    </div>
+                `;
+                zone.classList.remove('fade-out-smooth');
+            }, 800);
+        }
+
+        function elakNo() {
+            const btnNo = document.getElementById('escapeNo');
+            const x = Math.floor(Math.random() * (window.innerWidth - 120));
+            const y = Math.floor(Math.random() * (window.innerHeight - 60));
+            btnNo.style.position = 'fixed';
+            btnNo.style.left = x + 'px';
+            btnNo.style.top = y + 'px';
+            btnNo.style.zIndex = '999';
+        }
+
+        function triggerPreparingPage() {
+            zone.classList.add('fade-out-smooth');
+            setTimeout(() => {
+                zone.innerHTML = `
+                    <div class="center-flower" style="animation: pulseMekar 1.2s infinite; font-size: 3.8rem;">✨</div>
+                    <div class="text-ready" style="font-size: 1rem; letter-spacing: 2px; text-transform: none; color: #ffb6c1;">
+                        preparing...
+                    </div>
+                `;
+                zone.classList.remove('fade-out-smooth');
+                setTimeout(() => { loadSongSelectionPage(); }, 2500);
+            }, 800);
+        }
+
+        function loadSongSelectionPage() {
+            zone.classList.add('fade-out-smooth');
+            setTimeout(() => {
+                zone.innerHTML = `
+                    <div class="center-flower" style="animation: pulseMekar 1.5s infinite; font-size: 3rem; margin-bottom:10px;">🎵</div>
+                    <div class="text-ready" style="font-size: 1.1rem; margin-bottom: 5px; letter-spacing: 4px;">CHOOSE A SONG</div>
+                    <div class="cursive-magenta" style="font-size: 2.2rem; margin-bottom: 25px;">list of our songs</div>
+                    <div class="music-box" style="display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 280px; margin: 0 auto;">
+                        <button class="btn-song" onclick="playSong('bestpart', 'Best Part - Daniel Caesar')">✨ Best Part — Daniel Caesar</button>
+                        <button class="btn-song" onclick="playSong('understand', 'Understand - Keshi')">☁️ Understand — Keshi</button>
+                        <button class="btn-song" onclick="playSong('herewithme', 'Here With Me - d4vd')">🌊 Here With Me — d4vd</button>
+                        <button class="btn-song" onclick="playSong('bad', 'Bad — wave to earth')">🎸 Bad — wave to earth</button>
+                    </div>
+                `;
+                zone.classList.remove('fade-out-smooth');
+            }, 800);
+        }
+
+        function playSong(songKey, songTitle) {
+            const audio = document.getElementById('bgMusic');
+            audio.src = playlist[songKey];
+            audio.loop = true; 
+            audio.play().catch(e => console.log("Audio ready."));
+
+            const status = document.getElementById('musicStatus');
+            status.innerText = "NOW PLAYING: " + songTitle;
+            status.style.opacity = "1";
+
+            loadDigitalBouquet();
+        }
+
+        function loadDigitalBouquet() {
+            zone.classList.add('fade-out-smooth');
+            setTimeout(() => {
+                zone.innerHTML = `
+                    <h1 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 1.8rem; letter-spacing: 4px; margin: 0 0 5px 0; text-transform: uppercase;">A Digital Bouquet</h1>
+                    <p style="font-size: 0.9rem; letter-spacing: 1px; opacity: 0.6; text-transform: none; margin: 0 0 10px 0;">tap the flowers to make them bloom 💕</p>
+                    
+                    <div class="bouquet-container">
+                        <div class="stem-container">
+                            <div class="stem stem-1"></div>
+                            <div class="stem stem-2"></div>
+                            <div class="stem stem-3"></div>
+                            <div class="stem stem-4"></div>
+                            <div class="stem stem-5"></div>
+                        </div>
+                        <div class="vase"></div>
+                        <div class="flower-clickable fl-1" onclick="explodeEmoji(event, '🌻')">🌻</div>
+                        <div class="flower-clickable fl-2" onclick="explodeEmoji(event, '🌷')">🌷</div>
+                        <div class="flower-clickable fl-3" onclick="explodeEmoji(event, '🌸')">🌸</div>
+                        <div class="flower-clickable fl-4" onclick="explodeEmoji(event, '🌹')">🌹</div>
+                        <div class="flower-clickable fl-5" onclick="explodeEmoji(event, '💐')">💐</div>
+                        <div class="flower-clickable fl-extra1" onclick="explodeEmoji(event, '✨')">✨</div>
+                        <div class="flower-clickable fl-extra2" onclick="explodeEmoji(event, '💖')">💖</div>
+                    </div>
+                    <button class="btn-choice" style="margin-top: 25px; border-color: rgba(255, 79, 168, 0.4); color: #ff4fa8;" onclick="loadFilmRollPage()">Next: Our Film Roll 🎬</button>
+                `;
+                zone.classList.remove('fade-out-smooth');
+            }, 800);
+        }
+
+        function explodeEmoji(e, emoji) {
+            const clickX = e.clientX;
+            const clickY = e.clientY;
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.innerText = emoji;
+                particle.style.left = clickX + 'px';
+                particle.style.top = clickY + 'px';
+                const targetX = (Math.random() - 0.5) * 250; 
+                const targetY = (Math.random() - 0.7) * 200 + 100; 
+                particle.style.setProperty('--x', targetX + 'px');
+                particle.style.setProperty('--y', targetY + 'px');
+                particle.style.setProperty('--r', Math.floor(Math.random() * 360) + 'deg');
+                document.body.appendChild(particle);
+                setTimeout(() => { particle.remove(); }, 1200);
+            }
+        }
+
+        function loadFilmRollPage() {
+            zone.classList.add('fade-out-smooth');
+            setTimeout(() => {
+                let frameElements = '';
+                const doubleMemories = [...memories, ...memories];
+                
+                doubleMemories.forEach((item, index) => {
+                    const realIndex = index % memories.length; 
+                    const randomId = Math.floor(Math.random() * 90 + 10);
+                    frameElements += `
+                        <div class="film-frame" onclick="openMemoryDetails(${realIndex})">
+                            <img src="${item.img}" alt="Memory">
+                            <div class="film-meta">KOD ${randomId}A</div>
+                        </div>
+                    `;
+                });
+
+                zone.innerHTML = `
+                    <div class="text-ready" style="font-size: 1.2rem; margin-bottom: 10px;">Our Memory Lane</div>
+                    <div class="text-ready" style="font-size: 0.9rem; opacity: 0.6; margin-top:0; margin-bottom: 25px; text-transform:none; letter-spacing: 2px;">
+                        💡 tip: hold to pause and click a frame to read details manja!
+                    </div>
+                    
+                    <div class="film-container">
+                        <div class="film-track">
+                            <div class="film-strip">
+                                ${frameElements}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KINI TERUS MELANGKAH KE LOVE JAR (FAV THINGS PAGE TELAH DIBUANG SEPERTI DIARAHKAN) -->
+                    <button class="btn-choice" style="margin-top: 40px; border-color: rgba(255, 79, 168, 0.4); color: #ff4fa8;" onclick="loadLoveJarPage()">Next: The Love Jar 🍯</button>
+                `;
+                zone.classList.remove('fade-out-smooth');
+            }, 800);
+        }
+
+        function openMemoryDetails(index) {
+            const data = memories[index];
+            document.getElementById('mImg').src = data.img;
+            document.getElementById('mTitle').innerText = data.title;
+            document.getElementById('mDate').innerText = data.date;
+            document.getElementById('mStory').innerText = data.story;
+            document.getElementById('memoryModal').classList.add('active');
+        }
+
+        function closeModal(event, force = false) {
+            if (force || event.target.classList.contains('modal-overlay')) {
+                document.getElementById('memoryModal').classList.remove('active');
+            }
+        }
+
+        function loadLoveJarPage() {
+            zone.classList.add('fade-out-smooth');
+            openedCount = 0; 
+
+            setTimeout(() => {
+                const scrollTypes = ['📜', '🗞', '💌', '📜', '🗞', '💌'];
+                let scrollHTML = '';
+                
+                scrollTypes.forEach((emoji, index) => {
+                    scrollHTML += `
+                        <div class="scroll-note sc-${index}" id="scroll-${index}" onclick="openScrollNote(event, ${index}, '${emoji}')">
+                            ${emoji}
+                        </div>
+                    `;
+                });
+
+                zone.innerHTML = `
+		    <div class="text-ready" style="font-size: 1.2rem; margin-bottom: 10px;">Reasons Why I LOVE YOU</div>
+                    <div class="text-ready" id="jarInstruction" style="font-size: 1rem; margin-bottom: 10px; letter-spacing:1px; text-transform:none; padding: 0 15px;">
+                        tap any emojis in the jar manja 💖
+                    </div>
+
+                    <div class="jar-wrapper" id="loveJar">
+                        <div class="jar-cork-lid"></div>
+                        <div class="jar-neck"></div>
+                        <div class="jar-ribbon"></div>
+                        <div class="jar-glass">
+                            ${scrollHTML}
+                        </div>
+                    </div>
+
+                    <div class="text-ready" id="endMessage" style="margin-top: 15px; font-size:0.95rem; opacity:0; transition: opacity 1s ease; color:#ff4fa8; text-transform:none; padding: 0 10px;">
+                        and the biggest reason is... just because it's YOU manja!
+                    </div>
+                `;
+                zone.classList.remove('fade-out-smooth');
+            }, 800);
+        }
+
+        function openScrollNote(e, index, emoji) {
+            e.stopPropagation();
+            const selectedScroll = document.getElementById(`scroll-${index}`);
+            
+            if (selectedScroll.classList.contains('opened')) return;
+
+            if (navigator.vibrate) {
+                navigator.vibrate(35);
+            }
+
+            explodeHeartConfetti(e.clientX, e.clientY);
+
+            selectedScroll.classList.add('opened');
+            openedCount++;
+
+            setTimeout(() => {
+                document.getElementById('pReasonNum').innerText = `Reason #${index + 1}`;
+                document.getElementById('pReasonTxt').innerText = loveReasons[index];
+                document.getElementById('paperOverlay').classList.add('active');
+            }, 400);
+        }
+
+        function closePaper(event, force = false) {
+            if (force || event.target.classList.contains('paper-overlay')) {
+                document.getElementById('paperOverlay').classList.remove('active');
+                
+                if (openedCount >= loveReasons.length) {
+                    setTimeout(() => {
+                        const endMsg = document.getElementById('endMessage');
+                        const instr = document.getElementById('jarInstruction');
+                        if (endMsg) endMsg.style.opacity = "1";
+                        if (instr) {
+                            instr.innerHTML = `<button class="btn-choice" style="border-color: #ff4fa8; color: #ff4fa8; margin-top: 15px;" onclick="loadEggPage()">What's inside this egg? 🥚</button>`;
+                        }
+                    }, 600);
+                }
+            }
+        }
+
+        function loadEggPage() {
+            zone.classList.add('fade-out-smooth');
+            currentTaps = 0; 
+            setTimeout(() => {
+                zone.innerHTML = `
+                    <div class="text-ready" style="font-size: 0.8rem; margin-bottom: 5px; font-weight: bold; color: #ff4fa8;">tap the egg repeatedly to see what's inside! 🥚</div>
+                    <div id="mysteryEgg" style="font-size: 5rem; cursor: pointer; user-select: none; display: inline-block; transition: transform 0.1s ease; animation: bouncePelan 2s infinite ease-in-out;" onclick="tapEgg(this, event)">
+                        🥚
+                    </div>
+                    
+                    <div style="margin-top: 20px; font-size: 0.85rem; opacity: 0.6; text-transform:none;" id="eggPrompt">
+                        taps left: <span id="tapCount" style="font-weight: bold; color: #ff4fa8;">5</span>
+                    </div>
+                `;
+                zone.classList.remove('fade-out-smooth');
+            }, 800);
+        }
+
+        function tapEgg(element, event) {
+            currentTaps++;
+            const maxTaps = 5;
+            const tapsLeft = maxTaps - currentTaps;
+            
+            element.style.transform = "scale(0.85) rotate(" + (Math.random() * 20 - 10) + "deg)";
+            setTimeout(() => {
+                element.style.transform = "scale(1) rotate(0deg)";
+            }, 100);
+
+            if (currentTaps === 2) {
+                element.style.filter = "drop-shadow(0 0 12px rgba(255, 79, 168, 0.6))";
+            } else if (currentTaps === 4) {
+                element.innerHTML = "🐣"; 
+                element.style.filter = "drop-shadow(0 0 20px rgba(255, 215, 0, 0.8))";
+            }
+
+            const tapCountEl = document.getElementById('tapCount');
+            if (tapCountEl) tapCountEl.innerText = tapsLeft;
+
+            explodeHeartConfetti(event.clientX, event.clientY);
+
+            if (currentTaps >= maxTaps) {
+                element.onclick = null; 
+                element.innerHTML = "💥";
+                
+                for(let i = 0; i < 3; i++) {
+                    setTimeout(() => {
+                        explodeHeartConfetti(window.innerWidth / 2, window.innerHeight / 2);
+                    }, i * 150);
+                }
+
+                setTimeout(() => {
+                    loadAwardPage();
+                }, 500);
+            }
+        }
+
+        function loadAwardPage() {
+            zone.classList.add('fade-out-smooth');
+            setTimeout(() => {
+                zone.innerHTML = `
+                    <div style="position: relative; display: inline-block; margin-bottom: 15px;">
+                        <div class="trophy-box" style="font-size: 4.5rem; filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));">🏆</div>
+                    </div>
+                    
+                    <div class="award-certificate" style="background: #faf6ee; border: 8px double #d4af37; padding: 25px 20px; width: 90%; max-width: 360px; border-radius: 4px; color: #2b101d; box-shadow: 0 15px 35px rgba(0,0,0,0.5); text-align: center; margin: 10px auto 0 auto; opacity: 1 !important; transform: scale(1) !important;">
+                        <div class="cert-title" style="font-family: 'Cormorant Garamond', serif; text-transform: uppercase; letter-spacing: 4px; font-size: 0.85rem; color: #8a6d1c; font-weight: 700; margin-bottom: 5px;">Official Digital Award</div>
+                        <div class="cert-main" style="font-family: 'Dancing Script', cursive; font-size: 2.3rem; color: #ff4fa8; margin: 10px 0; line-height: 1.1;">Best Boyfriend Ever</div>
+                        <div class="cert-present" style="font-size: 1rem; font-style: italic; color: #555; margin-bottom: 5px;">proudly presented to</div>
+                        <div class="cert-name" style="font-family: 'Cormorant Garamond', serif; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #d4af37; display: inline-block; padding: 0 5px 5px 5px; margin-bottom: 15px; color: #2b101d;">Ahmad Akalil Muslim</div>
+                        
+                        <div class="cert-details" style="font-size: 0.95rem; line-height: 1.4; color: #444; padding: 0 5px; text-transform: none; letter-spacing: normal;">
+                            dianugerahkan atas kasih sayang yang melimpah, kesabaran melayan kerenah sayang, has always been there for me, and being my best comforter nombor satu di dunia!
+                        </div>
+
+                        <div class="cert-footer" style="margin-top: 25px; display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: #777; padding: 0 5px; text-align: left;">
+                            <div>
+                                <span>Tarikh:</span><br>
+                                <strong style="color: #2b101d;">26 Julai 2026</strong>
+                            </div>
+                            <div>
+                                <span>Disahkan oleh:</span>
+                                <div class="signature" style="font-family: 'Dancing Script', cursive; font-size: 1.3rem; color: #2b101d; border-top: 1px dashed #aaa; padding-top: 2px; margin-top: 5px;">Your Sayang</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-choice" style="margin-top: 25px; border-color: #ff4fa8; color: #ff4fa8;" onclick="startQuiz()">Next: Couple Quiz! 🧠</button>
+                `;
+                zone.classList.remove('fade-out-smooth');
+            }, 800);
+        }
+
+        function startQuiz() {
+            currentQuestionIndex = 0;
+            quizScore = 0;
+            showQuestion();
+        }
+
+        function showQuestion() {
+            zone.classList.add('fade-out-smooth');
+            setTimeout(() => {
+                const currentData = quizQuestions[currentQuestionIndex];
+                
+                let choicesHTML = '';
+                currentData.choices.forEach((choice, idx) => {
+                    choicesHTML += `
+                        <button class="btn-song" style="text-align: left; text-transform: none; font-size: 0.95rem; padding: 12px 15px;" onclick="submitAnswer(${idx})">
+                            ${choice}
+                        </button>
+                    `;
+                });
+
+                zone.innerHTML = `
+                    <div class="text-ready" style="font-size: 0.85rem; opacity: 0.6; margin-bottom: 5px;">
+                        Question ${currentQuestionIndex + 1} of 5
+                    </div>
+                    <div class="cursive-magenta" style="font-size: 1.5rem; line-height: 1.3; margin-bottom: 25px; font-family: sans-serif; text-transform: none; font-weight: bold; color: #ff4fa8; min-height: 55px; display: flex; align-items: center; justify-content: center; padding: 0 10px; text-shadow: none;">
+                        ${currentData.question}
+                    </div>
+                    <div class="quiz-options-box" style="display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 290px; margin: 0 auto;">
+                        ${choicesHTML}
+                    </div>
+                `;
+                zone.classList.remove('fade-out-smooth');
+            }, 400);
+        }
+
+        function submitAnswer(selectedIndex) {
+            const currentData = quizQuestions[currentQuestionIndex];
+            
+            if (selectedIndex === currentData.correct) {
+                quizScore++;
+            }
+
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < quizQuestions.length) {
+                showQuestion();
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function showQuizResult() {
+            zone.classList.add('fade-out-smooth');
+            setTimeout(() => {
+                let evaluationText = '';
+                let emojiResult = '';
+
+                if (quizScore >= 4) {
+                    emojiResult = "👑";
+                    evaluationText = `YAY hebatnya manja saya!! im so so proud of you manja, you're the best!`;
+                } else {
+                    emojiResult = "👀";
+                    evaluationText = `eleh ${quizScore}/5 je? takde la hebat sangat pun orang tu jawab huh!!`;
+                }
+
+                zone.innerHTML = `
+                    <div class="text-ready" style="font-size: 1.1rem; margin-bottom: 5px;">Quiz Completed!</div>
+                    <div style="font-size: 3.5rem; margin: 15px 0 5px 0;">${emojiResult}</div>
+                    
+                    <div class="text-ready" style="font-size: 1.8rem; margin-bottom: 10px;">
+                        Score: ${quizScore} / 5
+                    </div>
+                    
+                    <div class="text-ready" style="font-size: 0.95rem; line-height: 1.5; color: #ffb6c1; text-transform: none; max-width: 300px; margin: 0 auto 30px auto; padding: 0 10px;">
+                        "${evaluationText}"
+                    </div>
+
+                    <button class="btn-choice" style="border-color: #ff4fa8; color: #ff4fa8;" onclick="loadFinalLetterPage()">
+                        Next: The Final Special Part 💌
+                    </button>
+                `;
+                zone.classList.remove('fade-out-smooth');
+            }, 800);
+        }
+
+        function loadFinalLetterPage() {
+            zone.classList.add('fade-out-smooth');
+            setTimeout(() => {
+                zone.innerHTML = `
+                    <div class="center-flower" style="font-size: 3rem; margin-bottom: 10px; animation: pulseMekar 2s infinite;">💌</div>
+                    <div class="cursive-magenta" style="font-size: 2.1rem; margin-bottom: 15px;">To my dearest Manja,</div>
+                    
+                    <div class="letter-box" id="scrollLetterBox" onscroll="checkLetterReadStatus()">
+                        Dear Manja, <br><br>
+                        Happy Anniversary! I am genuinely really reaaaally grateful for having you in my life. you made my life better. <br><br>
+                        i love all of you, every part of you baby! <br><br>
+                    <div style="height: 5px; margin-top: 10px;" id="letterEndMarker"></div>
+                    </div>
+
+                    <div class="text-ready" id="scrollTip" style="font-size: 0.8rem; opacity: 0.6; text-transform:none; margin-bottom: 15px; color: #ffb6c1;">
+                        💡 tip: scroll surat sampai habis for a little surprise hihihi!
+                    </div>
+                    
+                    <button class="btn-choice" id="backStartBtn" style="border-color: #ff4fa8; color: #ff4fa8; display:none;" onclick="restartToStart()">Back to First Page</button>
+                `;
+                zone.classList.remove('fade-out-smooth');
+            }, 800);
+        }
+
+        let finalPopUpTriggered = false;
+        function checkLetterReadStatus() {
+            if (finalPopUpTriggered) return;
+            
+            const box = document.getElementById('scrollLetterBox');
+            if (box.scrollTop + box.clientHeight >= box.scrollHeight - 10) {
+                finalPopUpTriggered = true;
+                
+                setTimeout(() => {
+                    explodeHeartConfetti(window.innerWidth / 2, window.innerHeight / 2);
+                    
+                    // Memaparkan Glassmorphism Modal secara lembut (Smooth Fade & Scale)
+                    document.getElementById('finalSurpriseModal').classList.add('active');
+                    
+                    const tip = document.getElementById('scrollTip');
+                    if (tip) {
+                        tip.innerText = "YAY! thanks for reading everything manja :>";
+                        tip.style.color = "#ff4fa8";
+                    }
+                    const btn = document.getElementById('backStartBtn');
+                    if (btn) btn.style.display = "inline-block";
+                }, 500);
+            }
+        }
+
+        function closeFinalModal(event, force = false) {
+            if (force || event.target.classList.contains('modal-overlay')) {
+                document.getElementById('finalSurpriseModal').classList.remove('active');
+            }
+        }
+
+        function closePaper(event, force = false) {
+            if (force || event.target.classList.contains('paper-overlay')) {
+                document.getElementById('paperOverlay').classList.remove('active');
+                
+                if (openedCount >= loveReasons.length) {
+                    setTimeout(() => {
+                        const endMsg = document.getElementById('endMessage');
+                        const instr = document.getElementById('jarInstruction');
+                        if (endMsg) endMsg.style.opacity = "1";
+                        if (instr) {
+                            instr.innerHTML = `<button class="btn-choice" style="border-color: #ff4fa8; color: #ff4fa8; margin-top: 15px;" onclick="loadEggPage()">What's inside this egg? 🥚</button>`;
+                        }
+                    }, 600);
+                }
+            }
+        }
+
+        function restartToStart() {
+            zone.classList.add('fade-out-smooth');
+            setTimeout(() => {
+                window.location.reload();
+            }, 800);
+        }
+
+        function explodeHeartConfetti(clickX, clickY) {
+            const heartEmojis = ['💖', '✨', '💕', '🌸', '🧸', '🍿'];
+
+            for (let i = 0; i < 12; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.innerText = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+                particle.style.left = clickX + 'px';
+                particle.style.top = clickY + 'px';
+
+                const targetX = (Math.random() - 0.5) * 180;
+                const targetY = (Math.random() - 0.5) * 180; 
+
+                particle.style.setProperty('--x', targetX + 'px');
+                particle.style.setProperty('--y', targetY + 'px');
+                particle.style.setProperty('--r', Math.floor(Math.random() * 360) + 'deg');
+
+                document.body.appendChild(particle);
+                setTimeout(() => { particle.remove(); }, 1200);
+            }
+        }
+    </script>
+</body>
